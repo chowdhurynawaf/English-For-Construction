@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second Booting View Controller-->
+        <scene sceneID="SS0-do-2Of">
+            <objects>
+                <viewController storyboardIdentifier="SecondBootingViewController" id="FdG-if-mIT" customClass="SecondBootingViewController" customModule="EnglishForConstructionArena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YMS-oS-iqx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Walkthrough v2" translatesAutoresizingMaskIntoConstraints="NO" id="cbM-eT-KkY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2c-LH-np5">
+                                <rect key="frame" x="49" y="745" width="315" height="50"/>
+                                <state key="normal" image="Continue Button"/>
+                                <connections>
+                                    <action selector="continueBtn:" destination="FdG-if-mIT" eventType="touchUpInside" id="XeZ-Jo-kKU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cbM-eT-KkY" firstAttribute="leading" secondItem="X3d-7k-cJa" secondAttribute="leading" id="21H-8A-HPJ"/>
+                            <constraint firstAttribute="bottom" secondItem="cbM-eT-KkY" secondAttribute="bottom" id="XDY-ER-WMg"/>
+                            <constraint firstItem="i2c-LH-np5" firstAttribute="leading" secondItem="YMS-oS-iqx" secondAttribute="leadingMargin" constant="29" id="dA8-lP-0W3"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="i2c-LH-np5" secondAttribute="bottom" constant="67" id="dkr-fJ-h1d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i2c-LH-np5" secondAttribute="trailing" constant="30" id="dmo-rp-Gy6"/>
+                            <constraint firstItem="cbM-eT-KkY" firstAttribute="trailing" secondItem="X3d-7k-cJa" secondAttribute="trailing" id="hvl-CN-VHR"/>
+                            <constraint firstItem="cbM-eT-KkY" firstAttribute="top" secondItem="YMS-oS-iqx" secondAttribute="top" id="xIM-9o-F5b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X3d-7k-cJa"/>
+                    </view>
+                    <connections>
+                        <segue destination="eJ7-2D-tAn" kind="show" identifier="secondtothird" id="n4v-4L-kKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="123-kS-kIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.565217391304358" y="85.714285714285708"/>
+        </scene>
+        <!--ThirdBootingViewController-->
+        <scene sceneID="ZX4-6P-bU9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ThirdBooting" referencedIdentifier="ThirdBootingViewController" id="eJ7-2D-tAn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="EBm-Or-win"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isX-Dc-mBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583" y="41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Continue Button" width="343" height="50"/>
+        <image name="Walkthrough v2" width="375" height="812"/>
+    </resources>
+</document>

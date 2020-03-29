@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In View Controller-->
+        <scene sceneID="09V-bO-wkU">
+            <objects>
+                <viewController storyboardIdentifier="Sing_In_ViewController" id="wk1-3W-01G" customClass="signInViewController" customModule="EnglishForConstructionArena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eAd-B3-V6u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sign In" translatesAutoresizingMaskIntoConstraints="NO" id="pLP-L9-gHv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-Ho-qnO">
+                                <rect key="frame" x="9" y="611" width="394" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Connect Facebook Btn"/>
+                                <connections>
+                                    <action selector="connectFacebookBtn:" destination="wk1-3W-01G" eventType="touchUpInside" id="Zhx-92-xHu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR1-Eu-Z1i">
+                                <rect key="frame" x="10" y="681" width="394" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Connect Google Btn"/>
+                                <connections>
+                                    <action selector="connectGoogleBtn:" destination="wk1-3W-01G" eventType="touchUpInside" id="wk3-YS-GcV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf0-18-r8f">
+                                <rect key="frame" x="173" y="742" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-D4-twt">
+                                <rect key="frame" x="58" y="782" width="299" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Login Email Btn"/>
+                                <connections>
+                                    <action selector="loginEmailBtn:" destination="wk1-3W-01G" eventType="touchUpInside" id="NzY-N3-6gE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pLP-L9-gHv" firstAttribute="top" secondItem="eAd-B3-V6u" secondAttribute="topMargin" constant="-44" id="4SY-cP-45N"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pLP-L9-gHv" secondAttribute="bottom" constant="-34" id="ECU-Lx-e2c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pLP-L9-gHv" secondAttribute="trailing" constant="-20" id="VFe-2P-Pps"/>
+                            <constraint firstItem="pLP-L9-gHv" firstAttribute="leading" secondItem="eAd-B3-V6u" secondAttribute="leadingMargin" constant="-20" id="fqO-TV-yop"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bkm-xD-xDL"/>
+                    </view>
+                    <connections>
+                        <segue destination="gep-dE-Wve" kind="show" identifier="signintologin" id="0PL-4J-uj1"/>
+                        <segue destination="cLn-Fi-k6B" kind="presentation" identifier="fbToHome" modalPresentationStyle="fullScreen" id="viW-2k-5lT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o7C-KD-vfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="5ZH-cT-VZ2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="gep-dE-Wve" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yI7-GP-HzL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5x-Ds-315" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="70"/>
+        </scene>
+        <!--home-->
+        <scene sceneID="Io5-ZK-e26">
+            <objects>
+                <viewControllerPlaceholder storyboardName="homeStoryboard" referencedIdentifier="home" id="cLn-Fi-k6B" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ay-bd-fMa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="-64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Connect Facebook Btn" width="343" height="50"/>
+        <image name="Connect Google Btn" width="343" height="50"/>
+        <image name="Login Email Btn" width="335" height="48"/>
+        <image name="Sign In" width="375" height="812"/>
+    </resources>
+</document>
